@@ -1,0 +1,144 @@
+{
+  "_from": "nestjs-multer-extended@*",
+  "_id": "nestjs-multer-extended@1.4.1",
+  "_inBundle": false,
+  "_integrity": "sha512-jYOaYracbGn1K1GSTBRdPZXjvhn/YxRk/5poHxLn9XNVqdjrczjnBzXDbT86Q6rPuABD8aFUad7zOYzXqy2f/A==",
+  "_location": "/nestjs-multer-extended",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "nestjs-multer-extended@*",
+    "name": "nestjs-multer-extended",
+    "escapedName": "nestjs-multer-extended",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nestjs-multer-extended/-/nestjs-multer-extended-1.4.1.tgz",
+  "_shasum": "59945c6b577a141062ea4a15cc902c451909e093",
+  "_spec": "nestjs-multer-extended@*",
+  "_where": "C:\\Users\\Faruk\\Desktop\\backend",
+  "author": {
+    "name": "Minsung Kim",
+    "email": "jeffminsungkim@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffminsungkim/nestjs-multer-extended/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "aws-sdk": "^2.610.0",
+    "sharp": "^0.26.0"
+  },
+  "deprecated": false,
+  "description": "Extended MulterModule for NestJS",
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@nestjs/common": "7.4.4",
+    "@nestjs/core": "7.4.4",
+    "@nestjs/platform-express": "7.4.4",
+    "@nestjs/testing": "7.4.4",
+    "@types/express": "4.17.8",
+    "@types/jest": "26.0.14",
+    "@types/jest-when": "2.7.1",
+    "@types/multer": "1.4.4",
+    "@types/node": "13.13.5",
+    "@types/sharp": "0.26.0",
+    "@types/sinon": "9.0.8",
+    "@types/supertest": "2.0.10",
+    "commitizen": "4.2.1",
+    "conventional-changelog-cli": "2.1.0",
+    "coveralls": "3.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "4.3.0",
+    "jest": "26.5.2",
+    "jest-extended": "0.11.5",
+    "jest-when": "2.7.2",
+    "lint-staged": "10.4.0",
+    "nestjs-config": "1.4.7",
+    "prettier": "2.1.2",
+    "pretty-quick": "3.0.2",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.6.3",
+    "sinon": "9.2.0",
+    "supertest": "5.0.0",
+    "ts-jest": "26.4.1",
+    "ts-node": "9.0.0",
+    "tsc-watch": "4.2.9",
+    "tsconfig-paths": "3.9.0",
+    "tslint": "6.1.3",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "4.0.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/jeffminsungkim/nestjs-multer-extended#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-message": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [
+    "nestjs",
+    "nest",
+    "multer",
+    "multer-sharp",
+    "sharp",
+    "file upload",
+    "file interceptor",
+    "extend",
+    "extended",
+    "aws",
+    "s3"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.ts": [
+      "pretty-quick",
+      "tslint -p tsconfig.json"
+    ],
+    "*.{js,json}": "pretty-quick"
+  },
+  "main": "dist/index.js",
+  "name": "nestjs-multer-extended",
+  "peerDependencies": {
+    "@nestjs/common": "^6.11.5 || ^7.0.0",
+    "@nestjs/platform-express": "^6.11.5 || ^7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffminsungkim/nestjs-multer-extended.git"
+  },
+  "scripts": {
+    "build": "rimraf -rf dist && tsc -p tsconfig.json",
+    "commit": "git-cz",
+    "coverage": "jest -c ./tests/jest-e2e.json --runInBand --coverage --coverageReporters=text-lcov | coveralls",
+    "format": "prettier --write \"lib/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint:fix": "tslint --fix -c tslint.json 'lib/**/*{.ts,.tsx}'",
+    "prepublish:next": "npm run build",
+    "prepublish:npm": "npm run build",
+    "publish:next": "npm publish --access public --tag next",
+    "publish:npm": "npm publish --access public",
+    "test": "jest --runInBand --coverage",
+    "test:integration": "jest --config ./tests/jest-e2e.json --runInBand --coverage",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "url": "https://github.com/jeffminsungkim/nestjs-multer-extended#readme",
+  "version": "1.4.1"
+}
